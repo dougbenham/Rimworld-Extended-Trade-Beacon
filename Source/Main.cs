@@ -32,7 +32,7 @@ namespace ExtendedTradeBeacon
 
             __result = new List<IntVec3>();
             var result = __result;
-            RegionTraverser.BreadthFirstTraverse(region, (from, r) => r.portal == null, delegate (Region r)
+            RegionTraverser.BreadthFirstTraverse(region, (from, r) => r.door == null, delegate (Region r)
             {
                 result.AddRange(r.Cells.Where(item => item.InHorDistOf(pos, 30f)));
                 return false;
